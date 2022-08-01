@@ -1,0 +1,29 @@
+<div class="stopwatch app__stopwatch">
+  <div class="stopwatch__dial">
+    {{currentTime}}
+  </div>
+  <div class="stopwatch__buttons">
+    <button
+      type="button"
+      class="stopwatch__button"
+      (click)="startStopTimer()"
+    >
+      {{isActive ? 'Stop' : 'Start' }}
+    </button>
+    <button
+      type="button"
+      class="stopwatch__button"
+      (click)="pauseTimer($event)"
+      #waitBtn
+    >
+      Pause
+    </button>
+    <button
+      type="button"
+      class="stopwatch__button stopwatch__button--is-red"
+      (click)="resetTimer()"
+    >
+      Reset
+    </button>
+  </div>
+</div>
